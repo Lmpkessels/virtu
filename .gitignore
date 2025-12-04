@@ -1,1 +1,13 @@
+# Rust build output
+
 target
+
+# MD Files
+
+research.md 
+resources.md
+
+# Future features
+
+tests/vm_tests
+src/main.rs
