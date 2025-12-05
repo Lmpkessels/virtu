@@ -1,3 +1,7 @@
+use virtu::alu::{
+    alu, AluOp
+};
+
 const A: [u32; 8] = [
     0x12, 0x41, 0x55, 0x22,
     0xAB, 0xCD, 0xEF, 0x99,
@@ -7,11 +11,6 @@ const M: [u32; 8] = [
     0x1312, 0xAFF1, 0xF11A, 0x1121,
     0x3312, 0xCFF1, 0xBD1A, 0xA121,
 ];
-
-
-use virtu::alu::{
-    alu, AluOp
-};
 
 #[test]
 fn test_arithmetic_ops() {

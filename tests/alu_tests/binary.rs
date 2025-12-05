@@ -1,3 +1,7 @@
+use virtu::alu::{
+    and, or, xor, not, nand, nor, xnor, AluOp, alu
+};
+
 const B: [u32; 8] = [
     0x00000000,
     0xFFFFFFFF,
@@ -8,10 +12,6 @@ const B: [u32; 8] = [
     0b0001_0000,
     0b1110_1110,
 ];
-
-use virtu::alu::{
-    and, or, xor, not, nand, nor, xnor, AluOp, alu
-};
 
 #[test]
 fn test_all_binary_functions_to_check_if_all_opperations_match() {
@@ -25,6 +25,7 @@ fn test_all_binary_functions_to_check_if_all_opperations_match() {
         0b0001_0000,
         0b1110_1110,
     ];
+    
     for &x in &values {
         for &y in &values {
             let exp_and = x & y;
@@ -34,6 +35,7 @@ fn test_all_binary_functions_to_check_if_all_opperations_match() {
             let exp_nand = !(x & y);
             let exp_nor = !(x | y);
             let exp_xnor = !(x ^ y);
+
             assert_eq!((and(x, y)), (exp_and));
             assert_eq!((or(x, y)), (exp_or));
             assert_eq!((xor(x, y)), (exp_xor));
