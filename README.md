@@ -36,6 +36,14 @@ To understand the Stack:
 
 - [Nand2Tetris - Ch.7.2](https://www.amazon.nl/Elements-Computing-Systems-second-Principles/dp/0262539802/ref=sr_1_1?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=328DOO1B9NP0P&dib=eyJ2IjoiMSJ9.jtM_AMms3fUy7PJ8eU8bLA.ryS-SRMcBA1G2iLMZDqoD3HZz60xk-bHSDbIfJrILnE&dib_tag=se&keywords=nand+to+tetris&qid=1764773155&sprefix=nand+to+tetris%2Caps%2C122&sr=8-1)
 
+To understand the cycle for the program counter:
+
+- [Nand2Tetris - Ch.3.2.2](https://www.amazon.nl/Elements-Computing-Systems-second-Principles/dp/0262539802/ref=sr_1_1?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=328DOO1B9NP0P&dib=eyJ2IjoiMSJ9.jtM_AMms3fUy7PJ8eU8bLA.ryS-SRMcBA1G2iLMZDqoD3HZz60xk-bHSDbIfJrILnE&dib_tag=se&keywords=nand+to+tetris&qid=1764773155&sprefix=nand+to+tetris%2Caps%2C122&sr=8-1)
+
+To understand the layers of a program counter:
+
+- [Nand2Tetris - Ch.3.3.4](https://www.amazon.nl/Elements-Computing-Systems-second-Principles/dp/0262539802/ref=sr_1_1?__mk_nl_NL=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=328DOO1B9NP0P&dib=eyJ2IjoiMSJ9.jtM_AMms3fUy7PJ8eU8bLA.ryS-SRMcBA1G2iLMZDqoD3HZz60xk-bHSDbIfJrILnE&dib_tag=se&keywords=nand+to+tetris&qid=1764773155&sprefix=nand+to+tetris%2Caps%2C122&sr=8-1)
+
 ## Contribution
 
 Pull requests are welcome.
