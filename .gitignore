@@ -11,5 +11,8 @@ resources.md
 
 tests/vm_tests
 src/main.rs
-src/pc
 src/structure
+
+# Helpers
+
+examples
