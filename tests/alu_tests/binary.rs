@@ -1,8 +1,8 @@
 use virtu::alu::{
-    and, or, xor, not, nand, nor, xnor, AluOp, alu
+    and, or, xor, not, nand, nor, xnor, AluOp, Alu
 };
 
-const B: [u32; 8] = [
+const B: [u64; 8] = [
     0x00000000,
     0xFFFFFFFF,
     0xAAAAAAAA,
@@ -49,19 +49,21 @@ fn test_all_binary_functions_to_check_if_all_opperations_match() {
 
 #[test]
 fn test_bitwise_ops() {
+    let mut alu = Alu::new();
+
     for &x in &B {
         for &y in &B {
-            assert_eq!(alu(x, y, AluOp::And), x & y);
-            assert_eq!(alu(x, y, AluOp::Or),  x | y);
-            assert_eq!(alu(x, y, AluOp::Xor), x ^ y);
+            assert_eq!(alu.alu(x, y, AluOp::And), x & y);
+            assert_eq!(alu.alu(x, y, AluOp::Or),  x | y);
+            assert_eq!(alu.alu(x, y, AluOp::Xor), x ^ y);
 
-            assert_eq!(alu(x, y, AluOp::Nand), !(x & y));
-            assert_eq!(alu(x, y, AluOp::Nor),  !(x | y));
-            assert_eq!(alu(x, y, AluOp::Xnor), !(x ^ y));
+            assert_eq!(alu.alu(x, y, AluOp::Nand), !(x & y));
+            assert_eq!(alu.alu(x, y, AluOp::Nor),  !(x | y));
+            assert_eq!(alu.alu(x, y, AluOp::Xnor), !(x ^ y));
         }
 
         // Unary NOT
-        assert_eq!(alu(x, 0, AluOp::Xor), x);
+        assert_eq!(alu.alu(x, 0, AluOp::Xor), x);
     }
 }
 

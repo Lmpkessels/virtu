@@ -1,9 +1,11 @@
 use virtu::alu::{ 
-    AluOp, alu 
+    AluOp, Alu 
 };
 
 #[test]
 fn test_dispatch() {
+    let mut alu = Alu::new();
+
     let x = 0x55AA;
     let y = 0x0F0F;
 
@@ -21,7 +23,7 @@ fn test_dispatch() {
     ];
 
     for (op, expected) in ops {
-        assert_eq!(alu(x, y, op), expected);
+        assert_eq!(alu.alu(x, y, op), expected);
     }
 }
 
