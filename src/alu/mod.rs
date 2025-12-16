@@ -11,5 +11,5 @@ pub use arithmetic::{
 };
 
 pub use alu::{
-    AluOp, alu
+    AluOp, Alu
 };
