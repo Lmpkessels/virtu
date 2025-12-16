@@ -14,11 +14,11 @@ impl ProgramCounter {
         self.value = addr;
     }
 
-    pub fn increment(&mut self) {
+    pub fn inc(&mut self) {
         self.value += 1;
     }
     
-    pub fn value(&self) -> usize {
+    pub fn get(&self) -> usize {
         self.value
     }
 
