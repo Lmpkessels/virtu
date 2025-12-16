@@ -1,17 +1,16 @@
 use crate::stack::Stack;
-use crate::alu::Alu;
-use crate::pc::Pc;
+use crate::alu::{ AluOp, Alu };
+use crate::pc::ProgramCounter;
 
 pub struct VirtualMachine {
     pub stack: Stack,
     pub alu: Alu,
-    pub pc: Pc,
+    pub pc: ProgramCounter,
     pub running: bool
 }
 
 pub enum Op {
     Push(u64),
-    Reset,
     Add,
     Sub,
     Mul,
@@ -26,7 +25,7 @@ impl VirtualMachine {
     pub fn new() -> Self { Self {
         stack: Stack::new(),
         alu: Alu::new(),
-        pc: Pc::new(),
+        pc: ProgramCounter::new(),
         running: true
     }}
 
@@ -40,34 +39,34 @@ impl VirtualMachine {
 
             match instr {
                 Op::Push(v) => {
-                    self.stack.push(v);
+                    self.stack.push(*v);
                 }
 
                 Op::Add => {
                     let a = self.stack.pop();
                     let b = self.stack.pop();
-                    let op = self.alu.add(a, b);
+                    let op = self.alu.alu(a, b, AluOp::Add);
                     self.stack.push(op);
                 }
 
                 Op::Sub => {
                     let a = self.stack.pop();
                     let b = self.stack.pop();
-                    let op = self.alu.sub(a, b);
+                    let op = self.alu.alu(a, b, AluOp::Sub);
                     self.stack.push(op);
                 }
 
                 Op::Mul => {
                     let a = self.stack.pop();
                     let b = self.stack.pop();
-                    let op = self.alu.mul(a, b);
+                    let op = self.alu.alu(a, b, AluOp::Mul);
                     self.stack.push(op);
                 }
                 
                 Op::Div => {
                     let a = self.stack.pop();
                     let b = self.stack.pop();
-                    let op = self.alu.div(a, b);
+                    let op = self.alu.alu(a, b, AluOp::Div);
                     self.stack.push(op);
                 }
 
