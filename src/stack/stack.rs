@@ -4,7 +4,6 @@
 /// Works as any stack memory structure with LIFO (Last in First out).
 const STACK_SIZE: usize = 1024;
 
-#[derive(Debug)]
 pub struct Stack {
     pub data_storage: [u64; STACK_SIZE],
     pub sp: usize,
@@ -17,13 +16,13 @@ impl Stack {
     }}
 
     pub fn push(&mut self, value: u64) {
-        assert!(self.sp < STACK_SIZE, "Stack overflow")
+        assert!(self.sp < STACK_SIZE, "Stack overflow");
         self.data_storage[self.sp] = value;
         self.sp += 1;
     }
 
     pub fn pop(&mut self) -> u64 {
-        assert!(self.sp > 0, "Stack underflow")
+        assert!(self.sp > 0, "Stack underflow");
         self.sp -= 1;
         self.data_storage[self.sp]
     }

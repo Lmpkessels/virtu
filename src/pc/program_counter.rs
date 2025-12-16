@@ -1,4 +1,3 @@
-#[derive(Debug)]
 pub struct ProgramCounter {
     pub value: usize
 }
