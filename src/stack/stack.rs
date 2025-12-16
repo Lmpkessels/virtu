@@ -17,11 +17,13 @@ impl Stack {
     }}
 
     pub fn push(&mut self, value: u64) {
+        assert!(self.sp < STACK_SIZE, "Stack overflow")
         self.data_storage[self.sp] = value;
         self.sp += 1;
     }
 
     pub fn pop(&mut self) -> u64 {
+        assert!(self.sp > 0, "Stack underflow")
         self.sp -= 1;
         self.data_storage[self.sp]
     }
