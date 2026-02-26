@@ -54,6 +54,10 @@ For major changes, please open an issue first to discuss what you’d like to im
 Licensed under [MIT License](./LICENSE-MIT). <br/>
 © 2025 Luuk Kessels
 
+## Project status
+
+Development has been stoped for this project.
+
 ## Contact
 
 - 📧 [l@lmpkessels.com](mailto:l@lmpkessels.com)
