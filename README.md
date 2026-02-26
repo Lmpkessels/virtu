@@ -1,9 +1,9 @@
-# Virtu
+# Virtual Machine
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 ![Built with Rust](https://img.shields.io/badge/Built%20with-Rust-red.svg)
 
-Virtu is a minimal Virtual Machine written in Rust, built to understand execution at the lowest level of computing and blockchain.
+Virtual Machine is a minimal Virtual Machine written in Rust, built to understand execution at the lowest level of computing and blockchain.
 
 Every blockchain node from, Bitcoin to Ethereum to Solana, depends on a deterministic VM to execute transactions. Virtu is my first-principles exploration of that execution layer.
 
@@ -12,8 +12,8 @@ Every blockchain node from, Bitcoin to Ethereum to Solana, depends on a determin
 Make sure [Rust](https://rust-lang.org/tools/install/) and [Cargo](https://doc.rust-lang.org/cargo/getting-started/installation.html) are installed.
 
 ```bash
-git clone https://github.com/Lmpkessels/vritu.git
-cd virtu
+git clone git@github.com:Lmpkessels/virtual-machine.git
+cd virtual-machine
 cargo test
 ```
 
